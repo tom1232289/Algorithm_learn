@@ -1,3 +1,5 @@
+参考：http://www.nowamagic.net/librarys/veda/detail/1866
+
 数据   Data
 数据元素   Data   element
 数据项   Data   item

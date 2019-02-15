@@ -195,7 +195,7 @@ T DoubleCircularLinked<T>::deleteFront() {
 	return temp;
 }
 
-// ∂‡”‡
+// Â§ö‰Ωô
 template <typename T>
 T DoubleCircularLinked<T>::deleteLast() {
 	DoubleCircularLinkedNode<T> *pNode = pHead->pPre;

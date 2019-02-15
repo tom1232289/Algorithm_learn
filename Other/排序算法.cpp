@@ -113,15 +113,15 @@ void quick_sort_recursive(vector<T> &vec, int start, int end)
 	T mid = vec[end];
 	int left = start, right = end - 1;
 	while (left < right) {
-		while (vec[left] < mid && left < right) {
+		while (left < right && vec[left] <= min) {
 			left++;
 		}
-		while (vec[right] >= mid && left < right) {
+		while (left < right && vec[right] > mid) {
 			right--;
 		}
 		std::swap(vec[left], vec[right]);
 	}
-	if (vec[left] >= vec[end])
+	if (vec[left] > vec[end])
 		std::swap(vec[left], vec[end]);
 	else
 		left++;

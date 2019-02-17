@@ -6,17 +6,18 @@ using namespace std;
 
 /// 二分查找
 template <typename T>
-int BinarySearch(T key, vector<T> a)
+int BinarySearch(T key, vector<T> &vec)
 {
 	// 数组必须是有序的
+	sort(vec.begin(), vec.end());
 	int low = 0;
-	int high = a.size() - 1;
-	while (low <= high) {
-		// 被查找的键要么不存在，要么必然存在于a[low...high]之中
+	int high = vec.size() - 1;
+	while (low <= high) {	// =号是保证查找的是数组中最后一个元素
+		// 被查找的键要么不存在，要么必然存在于vec[low...high]之中
 		int mid = low + (high - low) / 2;
-		if (key < a[mid])
+		if (key < vec[mid])
 			high = mid - 1;
-		else if (key > a[mid])
+		else if (key > vec[mid])
 			low = mid + 1;
 		else
 			return mid;
@@ -26,9 +27,8 @@ int BinarySearch(T key, vector<T> a)
 
 int main()
 {
-	vector<int> ivec{ 0,1,2,3,4,5 };
-	sort(ivec.begin(), ivec.end());
-	auto temp = BinarySearch(4, ivec);
+	vector<int> ivec2{ 1,1,1,1,1,1 };
+	cout << BinarySearch(1, ivec2) << endl;
 
 	return 0;
 }

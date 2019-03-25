@@ -113,7 +113,7 @@ void quick_sort_recursive(vector<T> &vec, int start, int end)
 	T mid = vec[end];
 	int left = start, right = end - 1;
 	while (left < right) {
-		while (left < right && vec[left] <= min) {
+		while (left < right && vec[left] <= mid) {
 			left++;
 		}
 		while (left < right && vec[right] > mid) {

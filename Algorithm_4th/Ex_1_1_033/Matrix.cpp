@@ -50,6 +50,6 @@ vector<vector<double>> CMatrix::mult(vector<vector<double>>& a, vector<double>& 
 
 vector<vector<double>> CMatrix::mult(vector<double> &y, vector<vector<double>> &a)
 {
-	vector<vector<double>> y2(1, vector<double>(y));	
+	vector<vector<double>> y2(1, vector<double>(y));
 	return multiple(y2, a);
 }

@@ -17,7 +17,6 @@ public:
 		m_iFirstValue(firstValue),
 		m_iSecondValue(secondValue),
 		m_dThridValue(m_iFirstValue / m_iSecondValue) {
-	
 		int i = 0;
 	}
 

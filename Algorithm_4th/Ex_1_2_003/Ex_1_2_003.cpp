@@ -78,5 +78,5 @@ void Ex_1_2_003::OnClickedBtnIC()
 
 	ComputeICCount();
 	ui.Lable_Intersacted->setText(QStringLiteral("相交数：") + QString::number(m_iIntersect));
-	ui.Lable_Contains->setText(QStringLiteral("包含数：") + QString::number(m_iContain));	
+	ui.Lable_Contains->setText(QStringLiteral("包含数：") + QString::number(m_iContain));
 }

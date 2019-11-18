@@ -29,5 +29,8 @@
     <ClInclude Include="DoubleUtils.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="SinglyLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

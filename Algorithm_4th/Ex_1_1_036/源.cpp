@@ -13,7 +13,7 @@ void shuffle(vector<double> &a)
 	mt19937_64 gen(rd());
 	for (int i = 0; i < a.size(); ++i) {
 		// 将a[i]和a[i..N-1]中任意一个元素交换
-		uniform_int_distribution<> dis(0, a.size() -1 - i);
+		uniform_int_distribution<> dis(0, a.size() - 1 - i);
 		int r = i + dis(gen);
 		std::swap(a[i], a[r]);
 	}

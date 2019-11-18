@@ -6,6 +6,9 @@
 #define SMART_DATE_H
 
 #include <vector>
+#include "../Utils/LogInfo.h"
+
+using namespace LogInfo;
 
 class SmartDate
 {
@@ -16,7 +19,7 @@ public:
 		day(day)
 	{
 		if (!isValid()) {
-			throw "invalid date";
+			LogError("invalid date");
 		}
 	}
 

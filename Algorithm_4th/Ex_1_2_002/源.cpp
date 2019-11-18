@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
 	for (auto iteri = interval1dVec.begin(); iteri != interval1dVec.end(); ++iteri) {
 		for (auto iterj = iteri + 1; iterj != interval1dVec.end(); ++iterj) {
 			if (iteri->intersect(*iterj)) {
-				cout << "this two couple are intersect:[" 
-					<< fixed << setprecision(2) << iteri->getmin() << ", " << fixed << setprecision(2) << iteri->getmax() << "]" 
+				cout << "this two couple are intersect:["
+					<< fixed << setprecision(2) << iteri->getmin() << ", " << fixed << setprecision(2) << iteri->getmax() << "]"
 					<< " and [" << fixed << setprecision(2) << iterj->getmin() << ", " << fixed << setprecision(2) << iterj->getmax() << "]" << endl;
 			}
 		}

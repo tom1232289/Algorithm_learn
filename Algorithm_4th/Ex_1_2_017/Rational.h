@@ -5,9 +5,11 @@
 #ifndef RATIONNAL_H
 #define RATIONNAL_H
 
-#include <stdexcept>
 #include <string>
 #include <assert.h>
+#include "../Utils/LogInfo.h"
+
+using namespace LogInfo;
 
 // 最大公约数
 int gcd(int p, int q)
@@ -60,7 +62,7 @@ Rational::Rational(int numerator, int denominator) :
 {
 	// 分母为0
 	if (m_iDenominator == 0)
-		throw std::runtime_error("denominator is zero");
+		LogError("denominator is zero");
 
 	Simplification();
 }

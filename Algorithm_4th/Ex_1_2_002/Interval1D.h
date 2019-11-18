@@ -4,7 +4,7 @@
 #define INTERVAL1D_H
 
 // 直线上间隔
-class Interval1D	
+class Interval1D
 {
 public:
 	Interval1D(double low, double high);

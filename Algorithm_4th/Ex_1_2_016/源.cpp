@@ -2,7 +2,7 @@
 
 int main()
 {
- 	Rational rational1(-3, 4);
+	Rational rational1(-3, 4);
 	Rational rational2(4, 3);
 	auto temp = rational1.plus(rational2);
 	auto temp2 = rational1.minus(rational2);

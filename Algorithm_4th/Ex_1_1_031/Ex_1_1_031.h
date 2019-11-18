@@ -13,8 +13,8 @@ public:
 public:
 	void paintEvent(QPaintEvent *event);
 
-// ²Û
-private slots:
+	// ²Û
+	private slots:
 	void OnClickedBtnOK();
 
 private:

@@ -28,14 +28,14 @@ int main()
 	vector<double> y = { 4,5,6 };
 	cout << CMatrix::dot(x, y) << endl;
 
-	vector<vector<double>> a = { 
+	vector<vector<double>> a = {
 		{ 1,2,3 },
-		{ 4,5,6 } 
+		{ 4,5,6 }
 	};
-	vector<vector<double>> b = { 
+	vector<vector<double>> b = {
 		{ 1,4 },
 		{ 2,5 },
-		{ 3,6 } 
+		{ 3,6 }
 	};
 	auto array2_multiple = CMatrix::multiple(a, b);
 	printArray2(array2_multiple);

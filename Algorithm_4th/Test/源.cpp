@@ -152,6 +152,9 @@ int gcd(int p, int q)
 #include <iostream>
 #include <vector>
 #include <string>
+#include <list>
+#include "SinglyLinkedList.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -190,9 +193,31 @@ string mystery(string s)
 	return mystery(b) + mystery(a);
 }
 
+template <typename T>
+bool find(SinglyLinkedList<T> &sll, T key)
+{
+	for (auto iter = sll.begin(); iter != sll.end(); ++iter) {
+		if (key == *iter) {
+			return true;
+		}
+	}
+	return false;
+}
+
+template <typename T>
+T max(SinglyLinkedList<T> &sll)
+{
+	T ret = *(sll.begin());
+	for (auto iter = sll.begin(); iter != sll.end(); ++iter) {
+		if (*iter > ret) {
+			ret = *iter;
+		}
+	}
+
+	return ret;
+}
+
 int main()
 {
-	auto temp = gcd(3, 10);
 
-	return 0;
 }

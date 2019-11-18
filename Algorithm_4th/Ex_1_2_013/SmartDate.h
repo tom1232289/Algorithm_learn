@@ -8,6 +8,9 @@
 #include <vector>
 #include "../Utils/StringUtils.h"
 #include <stdexcept>
+#include "../Utils/LogInfo.h"
+
+using namespace LogInfo;
 
 class SmartDate
 {
@@ -21,7 +24,7 @@ public:
 		day(day)
 	{
 		if (!isValid()) {
-			throw std::runtime_error("invalid date");
+			LogError("invalid date");
 		}
 	}
 	SmartDate(string smartdate);
@@ -52,7 +55,7 @@ inline SmartDate::SmartDate(string smartdate)
 	day = stoi(vec.at(2));
 
 	if (!isValid()) {
-		throw std::runtime_error("invalid date");
+		LogError("invalid date");
 	}
 }
 
@@ -68,7 +71,7 @@ inline SmartDate & SmartDate::operator=(const SmartDate & rhs)
 	day = rhs.day;
 
 	if (!isValid()) {
-		throw std::runtime_error("invalid date");
+		LogError("invalid date");
 	}
 
 	return *this;
